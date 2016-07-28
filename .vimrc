@@ -5,10 +5,11 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 set incsearch
-"set hlsearch
+set hlsearch
 set t_Co=256
 colorscheme desert
 :hi Search term=reverse ctermfg=12 ctermbg=0 guifg=wheat guibg=peru
+nmap <F7> <C-w>w
 
 filetype off                  " required
 
@@ -100,5 +101,5 @@ set csto=0
 set cst
 set csverb
 
-nmap <F7> <C-w>w
+"-----------------a.vim---------------------
 nmap <F9> :A<CR>
