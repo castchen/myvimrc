@@ -1,4 +1,9 @@
+"----------special windows----------
+set backspace=indent,eol,start
+"-----------------------------------
+
 set nocompatible
+set encoding=utf-8
 syntax on
 set number
 set expandtab
@@ -32,7 +37,6 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'octol/vim-cpp-enhanced-highlight'
-Plugin 'vim-scripts/a.vim'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
@@ -85,21 +89,3 @@ map <F4> :NERDTreeToggle<CR>
 "----------------vim-highlight--------------------
 let g:cpp_class_scope_highlight = 1
 let g:cpp_experimental_template_highlight = 1
-
-"---------------cscope--------------------------
-nmap <C-@>s :cs find s <C-R>=expand("<cword>")<CR><CR>:copen<CR>   " 0 或 s: 查找本 C 符号
-nmap <C-@>g :cs find g <C-R>=expand("<cword>")<CR><CR>             " 1 或 g: 查找本定义
-nmap <F3> :cs find c <C-R>=expand("<cword>")<CR><CR>:copen<CR>     " 3 或 c: 查找调用本函数的函数
-nmap <F2> :cs find t <C-R>=expand("<cword>")<CR><CR>:copen<CR>     " 4 或 t: 查找本字符串
-nmap <C-@>e :cs find e <C-R>=expand("<cword>")<CR><CR>:copen<CR>   " 6 或 e: 查找本 egrep 模式
-nmap <C-@>f :cs find f <C-R>=expand("<cfile>")<CR><CR>:copen<CR>   " 7 或 f: 查找本文件
-nmap <C-@>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>:copen<CR> " 8 或 i: 查找包含本文件的文件
-nmap <C-@>d :cs find d <C-R>=expand("<cword>")<CR><CR>:copen<CR>   " 2 或 d: 查找本函数调用的函数
-
-set cscopequickfix=s-,c-,d-,i-,t-,e-
-set csto=0
-set cst
-set csverb
-
-"-----------------a.vim---------------------
-nmap <F9> :A<CR>
