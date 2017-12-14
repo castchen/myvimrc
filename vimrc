@@ -73,7 +73,6 @@ filetype plugin indent on    " required
 
 "-----------------start air-line---------------------
 let g:airline#extensions#tabline#enabled = 1
-set laststatus=2
 "-----------------end air-line-----------------------
 
 "------------------ycm------------------------------
